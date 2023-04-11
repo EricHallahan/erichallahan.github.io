@@ -1,0 +1,7 @@
+figure > video {
+    width: 100%;
+}
+
+figure {
+    margin-inline: var(--gap);
+}

@@ -1,0 +1,20 @@
+samp, code, kbd {
+    font-family: 'Latin Modern Mono';
+}
+
+body {
+    position: relative;
+    height: auto;
+    /*min-height: 100vh;*/
+    overflow-y: scroll;
+  }
+  
+  body > main {
+    height: auto;
+  }
+  
+  body > footer {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+  }

@@ -1,0 +1,22 @@
+.footer {
+    font-size: 0.75em;
+    /*max-width: calc(var(--main-width) + var(--gap) * 2);*/
+    margin: auto;
+    padding-block: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+    text-align: center;
+    line-height: 24px;
+    width: 100%;
+}
+
+.footer span {
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
+}
+
+.footer span:last-child {
+    white-space: nowrap;
+}
+
+.footer a {
+    color: inherit;
+}

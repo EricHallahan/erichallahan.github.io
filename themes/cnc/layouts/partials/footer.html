@@ -1,0 +1,7 @@
+<footer class="footer">
+    {{- if .Site.Copyright }}
+    <span>{{ .Site.Copyright | markdownify }}</span>
+    {{- else }}
+    <span>© {{ now.Year }} <a href="{{ .Site.Params.baseURL }}">{{ .Site.Title }}</a></span>
+    {{- end }}
+</footer>

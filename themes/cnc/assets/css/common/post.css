@@ -1,0 +1,123 @@
+.post-title {
+    margin-block: 0.75rem;
+    line-height: 1.25;
+}
+
+.home-info .entry-content {
+    -webkit-line-clamp: unset;
+}
+
+.post-entry {
+    position: relative;
+    font-size: smaller;
+    margin-block: 2em;
+}
+
+.post-entry h2 {
+    margin-block: 0;
+}
+
+/*.entry-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}*/
+
+.entry-isdraft {
+    display: inline;
+}
+
+.entry-cover {
+    margin-bottom: var(--gap);
+    text-align: center;
+}
+
+.list .entry-cover {
+    margin-bottom: initial;
+    margin-right: var(--gap);
+    flex-shrink: 0;
+}
+
+
+
+.entry-cover img {
+    border-radius: var(--radius);
+    pointer-events: none;
+    width: 100%;
+}
+
+.list .entry-cover img { max-width: calc(var(--gap)* 8 /3 + 64px); }
+
+.post-entry {
+    display: flex;
+}
+
+.infobox {
+    /*float: right;
+    float: inline-end;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;*/
+    width: fit-content;
+    margin-block-end: var(--gap);
+    /*float: right;*/
+    margin-inline-start: var(--gap);
+    padding: var(--content-gap);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.infobox > .entry-cover > img{
+    max-width: 256px;
+}
+
+.infobox dl {
+    margin: 0;
+}
+
+/*.infobox .post-tags {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}*/
+
+.infobox .post-tags div{
+    margin: 0.5em;
+}
+
+.entry-link {
+    text-decoration: none;
+}
+
+.post-content code {
+    margin: auto 4px;
+    font-size: inherit;
+    padding: 0.1em;
+    margin: 0;
+    background: var(--code-bg);
+    border-radius: 2px;
+}
+
+.post-content figure > pre,
+.post-content pre code {
+    display: block;
+    margin: auto 0;
+    padding: 10px;
+    background: 0 0;
+    overflow-x: auto;
+    word-break: break-all;
+    /*font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;*/
+    font-size: 0.875em;
+}
+
+.post-content pre.chroma {
+    border-radius: 10px;
+}
+
+.post-description {
+    margin-block: 0.75rem;
+}

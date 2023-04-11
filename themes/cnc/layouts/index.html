@@ -1,0 +1,22 @@
+{{- define "main" -}}
+
+<article class="home-info">
+    {{- /* <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header> */ -}}
+    <section class="entry-content">
+        <p>{{ .Params.hero | markdownify }}</p>
+    </section>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" $.Site.Params.socialIcons }}
+    </footer>
+</article>
+
+{{ with .Site.GetPage "/articles" }}
+<article>
+    <h2>Recent Articles</h2> 
+{{ partial "list" . }}
+</article>
+{{ end }}
+
+{{ end }}{{- /* end main */ -}}

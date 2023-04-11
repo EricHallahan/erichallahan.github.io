@@ -1,0 +1,41 @@
+.social-icons {
+    padding-inline: var(--gap);
+}
+
+.social-icons li a *:not(:first-child){
+    margin-inline-start: calc(var(--min-touch)/4);
+}
+
+.social-icons li{
+    min-height: var(--min-touch);
+    display: block;
+    width: fit-content;
+}
+
+.social-icons a{
+    min-height: var(--min-touch);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: calc(var(--min-touch)/4);
+    font-weight: bold;
+}
+
+
+.social-icons a svg {
+    height: calc(var(--min-touch)*0.707);
+    width: calc(var(--min-touch)*0.707);
+}
+
+a.arrow-link {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+}
+
+a.arrow-link::after {
+    content: "→";
+    margin-inline-start: 1ex;
+    /*font-family: 'Latin Modern Mono';*/
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+baseURL = 'https://erichallahan.github.io/'
+languageCode = 'en-us'
+title = 'Eric Hallahan'
+theme = ['cnc']
+defaultContentLanguage = 'en-us'
+[params]
+    author = ["Eric Hallahan"]
+    env = "production"
+    [[params.socialIcons]]
+        name="GitHub"
+        url="https://github.com/EricHallahan"
+        action="Visit"
+    [[params.socialIcons]]
+        name="Twitter"
+        url="https://twitter.com/EricHallahan"
+        action="Follow"
+    [[params.socialIcons]]
+        name="LinkedIn"
+        url="https://www.linkedin.com/in/eric-hallahan-a0aa34188/"
+        action="Connect"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      typographer = false
+      footnote = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2 
+  [[menu.main]]
+    name = "Articles"
+    url = "/articles/"
+    weight = 3

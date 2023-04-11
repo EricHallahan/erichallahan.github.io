@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4in" height="4in" viewBox="0 0 101.6 101.6" id="initial-logo">
+    <style type="text/css">
+      :root {
+        fill:none;stroke:#000;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          stroke:#FFF;
+        }
+      }
+    </style>
+    <g id="initials">
+      <path id="letterE" d="m 46.101,63.373 v 8.382 H 15.24 20.828 V 49.8475 H 35.941 V 53.975 45.72 49.8475 L 20.828,49.8602 V 29.845 H 15.24 44.45 v 6.985"/>
+      <path id="letterH" d="m 54.864,71.755 h 10.16 -5.08 v -41.91 h -5.08 10.16 -5.08 V 49.8475 H 81.28 V 29.845 H 76.2 86.36 81.28 v 41.91 H 76.2 86.36"/>
+    </g>
+    <rect id="initial-box" x="7.62" y="7.62" width="86.36" height="86.36" rx="17.62"/>
+</svg>
