@@ -73,7 +73,7 @@ Those looking to contact me, the author, maintainer, and webmaster of this site,
     <dt>Twitter</dt>
     <dd><a href="https://twitter.com/EricHallahan"><samp>@EricHallahan</samp></a>, Direct Message requests open.</dd>
     <dt>Discord</dt>
-    <dd><samp>EricHallahan#1051</samp>, Direct Message requests open.</dd>
+    <dd><samp>EricHallahan#1051</samp>, available via my <a href="https://discord.gg/MAkqqfMPgF">personal server</a>, Direct Message requests open.</dd>
     <dt>LinkedIn</dt>
     <dd><a href="https://www.linkedin.com/in/eric-hallahan-a0aa34188/">Eric Hallahan</a>, Messaging available (though not recommended).</dd>
     <dt>Email & Telephone</dt>

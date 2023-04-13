@@ -1,6 +1,6 @@
 ---
 title: A Heat-Powered Nitinol-Actuated Motor
-date: 2023-04-10T09:00:00-4:00
+publishDate: 2023-04-10T21:00:00-04:00
 description: A concept for leverging Nitinol in the application of lightweight actuators.
 type: blogpost
 cover:
