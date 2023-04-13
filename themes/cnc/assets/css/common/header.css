@@ -19,7 +19,7 @@
     --tertiary: rgba(255, 255, 255, 0.16);
     --content: white;
     --hljs-bg: #2e2e33;
-    --code-bg: #37383e;
+    --code-bg: #ddd;
     --border: white;
     background-color: #CCC;
     font-family: 'Latin Modern Sans';
@@ -30,6 +30,7 @@
     :root {
         background-color: #222;
         color-scheme: dark;
+        --code-bg: #181818;
     }
 }
 

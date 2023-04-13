@@ -19,7 +19,7 @@
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
 {{- end }}
 {{- end }}
-<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
+<meta name="description" content="{{- with .Description }}{{ . | markdownify | plainify }}{{- else }}{{- if .IsPage}}
     {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
     {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}" />
 {{- if or .Params.author .Site.Params.author }}

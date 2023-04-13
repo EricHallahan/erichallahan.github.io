@@ -18,6 +18,10 @@ defaultContentLanguage = 'en-us'
         name="LinkedIn"
         url="https://www.linkedin.com/in/eric-hallahan-a0aa34188/"
         action="Connect"
+    [[params.socialIcons]]
+        name="Discord"
+        url="https://discord.gg/MAkqqfMPgF"
+        action="Discuss"
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]

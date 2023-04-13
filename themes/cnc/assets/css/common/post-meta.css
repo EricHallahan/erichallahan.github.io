@@ -1,0 +1,38 @@
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-meta > * {
+    margin-inline-end: 1em;
+    white-space: nowrap;
+}
+
+.post-meta > *:last-child {
+    margin-inline-end: initial;
+}
+
+.post-meta > *:nth-last-child(2):not()::after {
+    content: " | ";
+}
+
+.post-meta .article-type {
+    margin-left: auto;
+}
+
+.article-type .essay {
+    background-color: dodgerblue;
+}
+
+.article-type .blogpost {
+    background-color: green;
+}
+
+.article-type .story {
+    background-color: red;
+}
+
+.article-type > * {
+    border-radius: 0.5em;
+    padding-inline: 0.3em;
+}

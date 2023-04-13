@@ -1,5 +1,12 @@
-.post-title {
+.post-header > * {
     margin-block: 0.75rem;
+}
+
+.post-header {
+    margin-block-end: 2em;
+}
+
+.post-title {
     line-height: 1.25;
 }
 
@@ -17,6 +24,10 @@
     margin-block: 0;
 }
 
+.post-entry .entry-content {
+    margin-block: 0.25em;
+}
+
 /*.entry-link {
     position: absolute;
     left: 0;
@@ -26,6 +37,7 @@
 }*/
 
 .entry-isdraft {
+    font-style: italic;
     display: inline;
 }
 
@@ -96,7 +108,7 @@
 .post-content code {
     margin: auto 4px;
     font-size: inherit;
-    padding: 0.1em;
+    padding: 0em;
     margin: 0;
     background: var(--code-bg);
     border-radius: 2px;

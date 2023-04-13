@@ -4,19 +4,18 @@
 			{{ partial "breadcrumbs.html" . -}}
 			<h1 class="post-title">
 				{{- .Title -}}
-				{{- if .Draft -}}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end -}}
 			</h1>
 			{{- if .Description }}
-			<div class="post-description">
-				{{- .Description -}}
-			</div>
+			<p class="post-description">
+				{{- .Description | htmlUnescape | markdownify | safeHTML -}}
+			</p>
 			{{- end }}
 			{{- if not (.Param "hideMeta") }}
-			<div class="post-meta">
+			<section class="post-meta">
 				{{- partial "post_meta.html" . -}}
 				{{- partial "translation_list.html" . -}}
 				{{- partial "edit_post.html" . -}}
-			</div>
+			</section>
 			{{- end }}
 		</header>
 		{{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden }}
