@@ -1,5 +1,5 @@
 <meta name="twitter:card" content="summary{{- if and .IsPage .Page.Params.author .Page.Params.cover.image -}}_large_image{{- end -}}" />
-{{- $imageUrl := "images/promo.png" | absURL -}}
+{{- $imageUrl := "images/square.png" | absURL -}}
 {{- if .Params.cover.image -}}
 {{- $imageUrl = .Params.cover.image | absURL -}}
 {{ if .Params.cover.relative -}}

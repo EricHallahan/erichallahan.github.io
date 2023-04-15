@@ -102,18 +102,23 @@ blockquote{
 
 aside{
   margin:0.5em 0;
-  color:var(--awsm-color-secondary);
+  opacity: 0.5;
+  font-size:0.8em;
 }
 
-@media (min-width: 65rem){
+aside > *:first-child::before {
+  content: "Aside: ";
+  font-weight: bold;
+}
+/*
+@media (min-width: 80rem){
   aside{
     position:absolute;
-    right:-12.5rem;
+    right: -10.5rem;
     width:9.375rem;
     max-width:9.375rem;
     margin:0;
     padding-left:0.5em;
-    font-size:0.8em;
   }
   footer > aside {
     position: unset;
@@ -122,7 +127,7 @@ aside{
     right: unset;
     border-left: unset;
   }
-}
+}*/
 aside:first-child{
   margin-top:0;
 }
