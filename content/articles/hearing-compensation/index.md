@@ -2,8 +2,8 @@
 title: Compensating for Hearing with Basic Signal Processing
 date: 2023-04-15T19:00:00-04:00
 publishDate: 2023-04-15T19:00:00-04:00
-lastMod: 2023-04-15T18:30:00-04:00
-description: A look at and an explanation of how I came to compensate for my hearing when I am not wearing a hearing aid.
+lastMod: 2023-04-15T22:30:00-04:00
+description: A look at (and an explanation of) how I came to compensate for my hearing when I am not wearing a hearing aid.
 tags: ["Signal Processing", "Audio", "Equalization", "PipeWire", "Linux", "Virtual Surround"]
 type: blogpost
 ---
@@ -204,7 +204,7 @@ ffmpeg -i space_debris.mod -filter_complex 'amovie=impulse.wav[ir]; [0][ir]afir=
 
 It is nice to apply the filter to audio ahead of time, but the full power of compensating for my hearing is when the correction is applied in real-time—such as is required when I am on a call and need to better inteligiblize the speech of others.
 
-This is among the prospects that enticed me to switch away from Windows 10 to Fedora 36 in <time datetime="2022-06">June 2022</time>, as Linux has a particular weapon to make this straightforward to implement and productionalize in a way that is unavailable on other platforms.
+This is among the prospects that enticed me to switch away from Windows 10 to Fedora 36 in <time datetime="2022-07">July 2022</time>, as Linux has a particular weapon to make this straightforward to implement and productionalize in a way that is unavailable on other platforms.
 
 [PipeWire](https://pipewire.org/) is a graph-based multimedia server that looks to drastically improve the handling of audio (and video) on Linux through a new robust and low-latency subsystem aimed to supersede (while also providing interfaces to replace) many previous Linux audio APIs such as ALSA, PulseAudio, and JACK.
 
