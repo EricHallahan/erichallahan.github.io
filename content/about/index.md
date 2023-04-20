@@ -2,6 +2,7 @@
 title: "About"
 description: About Eric Hallahan, this site, and how to contact for suggestions & inquiry.
 hideMeta: true
+layout: "aboutpage"
 ---
 
 <section>
@@ -50,6 +51,7 @@ Hosted by volunteers of both former and then-current employees of the Sikorsky C
 
 I stumbled into joining EleutherAI as a contributor in <time datetime="2021-02">Febuary 2021</time>, and would later become a core member by <time datetime="2021-03">late March 2021</time>. During my time volunteering, I would become maintainer and webmaster of the EleutherAI website and blog, redevelop its logo, and (most significantly) assist in the creation of GPT-NeoX-20B. After two years of dedicated contributorship, various personal circumstances made my volunteering unsustainable and forced me to depart against my desire in <time time="2023-03-15">March 2023</time>, 
 
+</section>
 </section>
 </section>
 <hr/>

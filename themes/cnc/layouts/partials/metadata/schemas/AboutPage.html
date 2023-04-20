@@ -1,1 +1,1 @@
-{{ return (dict "@type" "AboutPage" "url" .Site.BaseURL) }}
+{{ return (dict "@type" "AboutPage" "about" (slice (partial "metadata/schemas/WebSite.html" .) (partial "metadata/schemas/Person.html" .))) }}

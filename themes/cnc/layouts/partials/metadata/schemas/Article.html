@@ -1,0 +1,19 @@
+{{- $article := dict "@type" "Article" "mainEntityOfPage" (partial "metadata/schemas/WebPage.html" . ) "inLanguage" (.Language.Lang | default "en-us") "wordCount" .WordCount -}}
+{{- if .Title -}}{{- $article = merge $article (dict "headline" (.Title | plainify) "name" (.Title | plainify)) -}}{{- end -}}
+{{- $article = merge $article (dict "publisher" (partial "metadata/schemas/Person.html" . )) -}}
+{{- if .Date -}}{{- $article = merge $article (dict "dateCreated" (.Date.Format "2006-01-02T15:04:05.00Z") "copyrightYear" (.Date.Format "2006")) -}}{{- end -}}
+{{- if .PublishDate -}}{{- $article = merge $article (dict "datePublished" (.PublishDate.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -}}
+{{- if .Lastmod -}}{{- $article = merge $article (dict "dateModified" (.Lastmod.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -}}
+{{- if .Page.Params.author -}}{{- $article = merge $article (dict "author" (apply .Page.Params.author "partial" "metadata/schemas/Person.html" ".")) -}}{{- else -}}{{- $article = merge $article (dict "author" (partial "metadata/schemas/Person.html" .)) -}}{{- end -}}
+{{- if .Page.Params.contributor -}}{{- $article = merge $article (dict "contributor" (apply .Page.Params.contributor "partial" "metadata/schemas/Person.html" ".")) -}}{{- end -}}
+{{- if .Page.Params.description -}}{{- $article = merge $article (dict "description" (.Page.Params.description | markdownify | plainify | truncate 180)) -}}{{- else -}}{{- .Summary | plainify -}}{{- end -}}
+
+{{- if .Params.cover.image -}}
+{{- if (ne .Params.cover.relative true) -}}
+    {{- $article = merge $article (dict "image" (.Params.cover.image | absURL)) -}}
+    {{- else -}}
+    {{- $article = merge $article (dict "image" ((path.Join .RelPermalink .Params.cover.image ) | absURL)) -}},
+    {{- end -}}
+{{- end -}}
+
+{{- return $article -}}

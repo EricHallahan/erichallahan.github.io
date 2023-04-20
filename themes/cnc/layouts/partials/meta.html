@@ -1,5 +1,13 @@
 {{- $meta := false -}}
 {{- if eq .Page.Params.layout "aboutpage" -}}
-{{- $meta = partial "metadata/schemas/Organization.html" .}}
+{{- $meta = partial "metadata/schemas/Person.html" . -}}
+{{- else if .IsHome -}}
+{{- $meta = partial "metadata/schemas/WebSite.html" . -}}
+{{- else -}}
+{{- if eq .Page.Params.type "blogpost" -}}
+{{- $meta = partial "metadata/schemas/BlogPosting.html" . -}}
+{{- else if eq .Page.Params.type "essay" -}}
+{{- $meta = partial "metadata/schemas/Article.html" . -}}
+{{- end -}}
 {{- end -}}
 {{- return $meta -}}

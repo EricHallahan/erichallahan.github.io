@@ -259,7 +259,7 @@ figure figcaption{
   opacity:0.65;
   font-size:0.85em;
 }
-figure table + figcaption {
+figure * + figcaption {
     margin-top:0.5em;
 }
 
@@ -626,7 +626,7 @@ article h1 {
 }*/
 figure table, figure figcaption {
     display: table;
-    margin: 0 auto;
+    margin-inline: auto;
 }
 article header p {
     font-size: 1em;

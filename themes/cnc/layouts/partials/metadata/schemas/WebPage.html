@@ -1,10 +1,14 @@
-{{- $webpage := (dict "@type" "WebPage" "@id" .Permalink "name" .Page.Title) -}}
+{{- $webpage := (dict "@type" "WebPage" "@id" .Permalink "name" .Page.Title "copyrightYear" now.Year) -}}
 {{- if eq .Page.Params.layout "aboutpage" -}}
 {{- $webpage = merge $webpage (partial "metadata/schemas/AboutPage.html" .) }}
-{{- else -}}
-{{- $webpage = merge $webpage (dict "publisher" (partial "metadata/schemas/Organization.html" (dict "cxt" . ))) }}
 {{- end -}}
+{{- $webpage = merge $webpage (dict "publisher" (partial "metadata/schemas/Person.html" .)) }}
 {{- if eq .Page.Params.layout "faqpage" -}}
 {{- $webpage = merge $webpage (partial "metadata/schemas/FAQPage.html" .) }}
 {{- end -}}
+
+{{/*- if .Date -}}{{- $webpage = merge $webpage (dict "dateCreated" (.Date.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -}}
+{{- if .PublishDate -}}{{- $webpage = merge $webpage (dict "datePublished" (.PublishDate.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -}}
+{{- if .Lastmod -}}{{- $webpage = merge $webpage (dict "dateModified" (.Lastmod.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -*/}}
+
 {{- return $webpage  -}}

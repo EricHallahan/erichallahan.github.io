@@ -2,7 +2,7 @@
 {{- $schema_ := partial "meta.html" . -}}
 
 {{- if $schema_ -}}
-{{- if eq (index $schema_ "@type") "Organization" -}}
+{{- if or (eq (index $schema_ "@type") "Person") (eq (index $schema_ "@type") "WebSite") -}}
 {{- $schema = slice $schema_ $schema -}}
 {{- else -}}
 {{- $schema = merge $schema_ (dict "mainEntityOfPage" $schema) -}}
@@ -16,5 +16,5 @@
 {{- end -}}
 
 <script type="application/ld+json">
-{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+{{- $schema | jsonify (dict "indent" "  ") | replaceRE `.*"email".*\n` "" | safeJS -}}
 </script>

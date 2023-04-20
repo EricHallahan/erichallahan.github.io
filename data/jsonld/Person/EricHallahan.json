@@ -1,0 +1,36 @@
+{
+	"@context": "http://schema.org/",
+	"@type": "Person",
+	"name": "Eric Hallahan",
+	"familyName": "Hallahan",
+	"givenName": "Eric",
+	"additionalName": "Justin",
+	"gender": "https://schema.org/Male",
+	"birthDate": "2001-01-12T18:05Z",
+	"nationality": {
+		"@type": "Country",
+		"name": "USA"
+	},
+	"email": "mailto:eric@hallahans.name",
+	"knowsLanguage": "en",
+	"alumniOf": [
+		{
+			"@type": "EducationalOrganization",
+			"name": "The Pennsylvania State University",
+			"url": "psu.edu"
+		}, {
+			"@type": "EducationalOrganization",
+			"name": "Downingtown High School West Campus",
+			"url": "dw.dasd.org"
+		}, {
+			"@type": "Organization",
+			"name": "The VEXMEN of Brandywine Robotics",
+			"url": "vexmen.com"
+		}
+	],
+	"sameAs": [
+		"https://twitter.com/EricHallahan",
+		"https://github.com/EricHallahan",
+		"https://www.linkedin.com/in/eric-hallahan-a0aa34188/"
+	]
+}

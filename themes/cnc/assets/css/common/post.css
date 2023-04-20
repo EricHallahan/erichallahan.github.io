@@ -114,20 +114,41 @@
     border-radius: 2px;
 }
 
-.post-content figure > pre,
-.post-content pre code {
-    display: block;
-    margin: auto 0;
-    padding: 10px;
-    background: 0 0;
+.post-content pre {
+    margin: auto;
     overflow-x: auto;
+}
+
+
+.post-content pre code,
+.post-content pre samp {
+    display: table-cell;
+    padding: 1ch;
     word-break: break-all;
     /*font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;*/
     font-size: 0.875em;
 }
 
-.post-content pre.chroma {
+.post-content pre code,
+.post-content pre samp {
+    background: none;
+}
+
+.post-content pre.chroma,
+.term {
     border-radius: 10px;
+}
+
+.post-content .term {
+    background-color: black;
+    color: white;
+    color-scheme: dark;
+    max-width: 71.75ch;
+    margin-inline: auto;
+}
+
+.post-content .term > * {
+    max-width: 80ch;
 }
 
 .post-description {
