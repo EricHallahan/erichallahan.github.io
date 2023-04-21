@@ -1,6 +1,6 @@
 
 <span class="article-type">
     <span class="{{- .Params.type -}}">
-        {{- if .Draft }}<span class="entry-isdraft">Draft</span>{{ end }} {{ index (dict "blogpost" "Blog Post" "essay" "Essay") .Params.type -}}
+        {{- if .Draft }}<span class="entry-isdraft">Draft</span>{{ end }} {{ index (dict "blogpost" "Blog Post" "essay" "Essay" "anecdote" "Anecdote") .Params.type -}}
     </span>
 </span>

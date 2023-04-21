@@ -1,9 +1,7 @@
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- if hugo.IsProduction }}
 <meta name="robots" content="index, follow" />
-{{- template "_internal/google_analytics.html" . }}
 {{- else }}
 <meta name="robots" content="noindex, nofollow" />
 {{- end }}
@@ -120,7 +118,7 @@
 
 {{- /* Web App Manifest */}}
 {{- $manifest := .Site.Params.assets.manifest | default "manifest.json" | absURL }}
-<meta name="msapplication-TileColor" content="#000" />
+<meta name="msapplication-TileColor" content="#222" />
 <meta name="color-scheme" content="light dark" />
 
 {{- /* Generator */}}
@@ -135,9 +133,9 @@
 {{ end }}
 
 {{- /* Misc */}}
-{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
- {{- /* template "_internal/google_analytics.html" . */}}
 {{- template "partials/metadata/opengraph.html" . }}
 {{- template "partials/metadata/twitter_cards.html" . }}
 {{- template "partials/metadata/schema_json.html" . }}
+{{- if hugo.IsProduction }}
+{{- template "_internal/google_analytics.html" . }}
 {{- end -}}
