@@ -2,6 +2,6 @@
     {{- if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
     {{- else }}
-    <span>© {{ now.Year }} <a href="{{ .Site.Params.baseURL }}">{{ .Site.Title }}</a></span>
+    <span>© {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span>
     {{- end }}
 </footer>
