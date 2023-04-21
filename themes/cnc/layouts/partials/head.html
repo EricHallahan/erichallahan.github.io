@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 <meta name="robots" content="index, follow" />
+{{- template "_internal/google_analytics.html" . }}
 {{- else }}
 <meta name="robots" content="noindex, nofollow" />
 {{- end }}
@@ -139,5 +140,4 @@
 {{- template "partials/metadata/opengraph.html" . }}
 {{- template "partials/metadata/twitter_cards.html" . }}
 {{- template "partials/metadata/schema_json.html" . }}
-{{- template "_internal/google_analytics.html" . }}
 {{- end -}}
