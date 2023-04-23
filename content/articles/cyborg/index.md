@@ -1,7 +1,7 @@
 ---
 title: Cyborg
 date: 2018-10-15
-publishDate: 2023-04-16T10:30-04:00
+publishDate: 2023-04-16T10:30:00-04:00
 lastMod: 2018-10-15
 description: My Common Application personal essay, circa <time datetime="2018-10">October 2018</time>.
 type: essay
