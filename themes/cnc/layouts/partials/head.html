@@ -40,6 +40,7 @@
 {{- /* Styles */}}
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
 {{- $reset := (resources.Get "css/core/normalize.css") }}
+{{- $lm := (resources.Get "css/core/latin-modern.css") }}
 {{- $awsm := (resources.Get "css/core/awsm-mod.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
 
@@ -48,7 +49,7 @@
 {{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}*/}}
 
 {{- /* order is important */}}
-{{- $stylesheet := (slice $reset $awsm $common) | resources.Concat "assets/css/stylesheet.css" | minify  }}
+{{- $stylesheet := (slice $reset $lm $awsm $common) | resources.Concat "assets/css/stylesheet.css" | minify  }}
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style 
