@@ -1,8 +1,7 @@
-{{- $webpage := (dict "@type" "WebPage" "@id" .Permalink "name" .Page.Title "copyrightYear" now.Year) -}}
+{{- $webpage := (dict "@type" "WebPage" "@id" .Permalink "name" .Page.Title "copyrightYear" now.Year "publisher" (partial "metadata/schemas/Person.html" .)) -}}
 {{- if eq .Page.Params.layout "aboutpage" -}}
 {{- $webpage = merge $webpage (partial "metadata/schemas/AboutPage.html" .) }}
 {{- end -}}
-{{- $webpage = merge $webpage (dict "publisher" (partial "metadata/schemas/Person.html" .)) }}
 {{- if eq .Page.Params.layout "faqpage" -}}
 {{- $webpage = merge $webpage (partial "metadata/schemas/FAQPage.html" .) }}
 {{- end -}}

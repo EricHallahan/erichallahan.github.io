@@ -4,12 +4,16 @@
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
-  <h1>{{ .Title }}</h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
-  {{- end }}
+  <hgroup>
+    <h1 class="page-title">
+      {{- .Title -}}
+    </h1>
+    {{- if .Description }}
+    <p class="post-description">
+      {{- .Description | htmlUnescape | markdownify | safeHTML -}}
+    </p>
+    {{- end }}
+  </hgroup>
 </header>
 {{- if .Content }}
 <div class="post-content" >

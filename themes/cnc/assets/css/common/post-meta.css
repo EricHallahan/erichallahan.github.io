@@ -22,14 +22,17 @@
 
 .article-type .essay {
     background-color: dodgerblue;
+    background-color: rgba(30, 143, 255, 0.50);
 }
 
 .article-type .blogpost {
     background-color: green;
+    background-color: rgba(0, 128, 0, 0.50);
 }
 
 .article-type .anecdote {
     background-color: red;
+    background-color: rgba(255, 0, 0, 0.50);
 }
 
 .article-type > * {

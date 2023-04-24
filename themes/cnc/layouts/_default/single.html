@@ -2,14 +2,16 @@
 	<article class="post-single">
 		<header class="post-header">
 			{{ partial "breadcrumbs.html" . -}}
-			<h1 class="post-title">
-				{{- .Title -}}
-			</h1>
-			{{- if .Description }}
-			<p class="post-description">
-				{{- .Description | htmlUnescape | markdownify | safeHTML -}}
-			</p>
-			{{- end }}
+			<hgroup>
+				<h1 class="post-title">
+					{{- .Title -}}
+				</h1>
+				{{- if .Description }}
+				<p class="post-description">
+					{{- .Description | htmlUnescape | markdownify | safeHTML -}}
+				</p>
+				{{- end }}
+			</hgroup>
 			{{- if not (.Param "hideMeta") }}
 			<section class="post-meta">
 				{{- partial "post_meta.html" . -}}

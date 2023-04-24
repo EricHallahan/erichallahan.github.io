@@ -2,12 +2,16 @@
 
 {{- if .Title }}
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
-        {{ .Description }}
-    </div>
-    {{- end }}
+    <hgroup>
+        <h1 class="page-title">
+          {{- .Title -}}
+        </h1>
+        {{- if .Description }}
+        <p class="post-description">
+          {{- .Description | htmlUnescape | markdownify | safeHTML -}}
+        </p>
+        {{- end }}
+    </hgroup>
 </header>
 {{- end }}
 

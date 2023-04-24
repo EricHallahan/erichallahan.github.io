@@ -3,15 +3,16 @@
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title">
-      {{ .Title }}
-      {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
-    </h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
-    {{- end }}
+    <hgroup>
+      <h1 class="post-title">
+        {{- .Title -}}
+      </h1>
+      {{- if .Description }}
+      <p class="post-description">
+        {{- .Description | htmlUnescape | markdownify | safeHTML -}}
+      </p>
+      {{- end }}
+    </hgroup>
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}

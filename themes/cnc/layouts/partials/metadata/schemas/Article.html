@@ -4,8 +4,40 @@
 {{- if .Date -}}{{- $article = merge $article (dict "dateCreated" (.Date.Format "2006-01-02T15:04:05.00Z") "copyrightYear" (.Date.Format "2006")) -}}{{- end -}}
 {{- if .PublishDate -}}{{- $article = merge $article (dict "datePublished" (.PublishDate.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -}}
 {{- if .Lastmod -}}{{- $article = merge $article (dict "dateModified" (.Lastmod.Format "2006-01-02T15:04:05.00Z")) -}}{{- end -}}
-{{- if .Page.Params.author -}}{{- $article = merge $article (dict "author" (apply .Page.Params.author "partial" "metadata/schemas/Person.html" ".")) -}}{{- else -}}{{- $article = merge $article (dict "author" (partial "metadata/schemas/Person.html" .)) -}}{{- end -}}
-{{- if .Page.Params.contributor -}}{{- $article = merge $article (dict "contributor" (apply .Page.Params.contributor "partial" "metadata/schemas/Person.html" ".")) -}}{{- end -}}
+
+{{/*- if .Page.Params.author -}}
+{{- $authors := slice -}}
+{{- if reflect.IsSlice .Page.Params.author }}
+{{- range $author := .Page.Params.author -}}
+{{- $authors = $authors | append (partial "metadata/schemas/Person.html" (slice . $author)) }}
+{{- end -}}
+
+{{- $article = merge $article (dict "author" $authors) -}}
+{{- else -}}
+{{- $article = merge $article (dict "author" (partial "metadata/schemas/Person.html" .)) -}}
+{{- end -}}
+{{- end -*/}}
+
+{{- if .Page.Params.author -}}
+{{- $article = merge $article (dict "author" (uniq (apply (apply .Page.Params.author "slice" "$." ".") "partial" "metadata/schemas/Person.html" "."))) -}}
+{{- else -}}
+{{- $article = merge $article (dict "author" (uniq (slice (partial "metadata/schemas/Person.html" .)))) -}}
+{{- end -}}
+
+{{- if $article.author -}}
+{{- $article = merge $article (dict "contributor" $article.author) -}}
+{{- end -}}
+
+{{- if .Page.Params.contributor -}}
+{{- range $contributor := apply (uniq .Page.Params.contributor) "partial" "metadata/schemas/Person.html" "." -}}
+{{- $existing_contributor_names := apply $article.contributor "index" "." "name" -}}
+{{- if not (in $existing_contributor_names (index $contributor "name")) -}}
+{{- $article = merge $article (dict "contributor" (uniq ($article.contributor | append $contributor))) -}}
+{{- end -}}
+{{- end -}}
+{{- $article = merge $article (dict "contributor" (uniq $article.contributor)) -}}
+{{- end -}}
+
 {{- if .Page.Params.description -}}{{- $article = merge $article (dict "description" (.Page.Params.description | markdownify | plainify | truncate 180)) -}}{{- else -}}{{- .Summary | plainify -}}{{- end -}}
 
 {{- if .Params.cover.image -}}

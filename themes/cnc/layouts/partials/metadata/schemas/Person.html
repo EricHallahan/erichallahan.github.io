@@ -1,13 +1,35 @@
 {{- $person := false -}}
-{{- if reflect.IsMap $.Site.Data.jsonld.Person.EricHallahan  -}}
-{{- $person = $.Site.Data.jsonld.Person.EricHallahan -}}
+{{- $ctx := false -}}
+{{- $name := false -}}
+{{ if eq (printf "%T" .) "string" -}}
+{{ $name = . }}
+{{- else if reflect.IsSlice . -}}
+{{- $ctx = index . 1 -}}
+{{- $name = index . 2 -}}
+{{- else -}}
+{{- $ctx = . -}}
+{{- end -}}
+
+
+{{- if ne $name false -}}
+{{- $splitName := split $name " " -}}
+{{- $person = dict "@type" "Person" "name" $name -}}
+
+{{- if not (or (eq (index $splitName 1) nil) (eq (index $splitName 0) nil)) -}}
+{{- $person = merge $person (dict "familyName" (index $splitName 1)) -}}
+{{- $person = merge $person (dict "givenName" (index $splitName 0)) -}}
+{{- end -}}
+
+{{- end -}}
+
+{{- if ne $ctx false -}}
+{{- if or (not (reflect.IsSlice .)) (and (and (isset $person "familyName") (eq $person.familyName $ctx.Site.Data.jsonld.Person.EricHallahan.familyName)) (and (isset $person "givenName") (eq $person.givenName $ctx.Site.Data.jsonld.Person.EricHallahan.givenName))) -}}
+{{- $person = $ctx.Site.Data.jsonld.Person.EricHallahan -}}
 {{- $person = merge $person (dict "email" "") -}}
 {{ range $aboutpage := (where .Site.Pages "Params.layout" "aboutpage") }}
 {{- $person = merge $person (dict "@id" (printf "%s%s" $aboutpage.Permalink "#person")) }}
 {{- end -}}
+{{- end -}}
 
-{{- else -}}
-{{- $splitName := split . " " -}}
-{{- $person = dict "@type" "Person" "name" . "familyName" (index $splitName 1) "givenName" (index $splitName 0) -}}
 {{- end -}}
 {{- return $person -}}
