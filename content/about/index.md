@@ -49,7 +49,7 @@ Hosted by volunteers of both former and then-current employees of the Sikorsky C
 
 #### EleutherAI
 
-I stumbled into joining EleutherAI as a contributor in <time datetime="2021-02"> February 2021</time>, and would later become a core member by <time datetime="2021-03">late March 2021</time>. During my time volunteering, I would become maintainer and webmaster of the EleutherAI website and blog, redevelop its logo, and (most significantly) assist in the creation of [GPT-NeoX-20B](https://arxiv.org/abs/2204.06745). After two years of dedicated contributorship, various personal circumstances made my volunteering unsustainable and forced me to depart against my desire in <time time="2023-03-15">March 2023</time>.
+I stumbled into joining EleutherAI as a contributor in <time datetime="2021-02">February 2021</time>, and would later become a core member by <time datetime="2021-03">late March 2021</time>. During my time volunteering, I would become maintainer and webmaster of the EleutherAI website and blog, redevelop its logo, and (most significantly) assist in the creation of [GPT-NeoX-20B](https://arxiv.org/abs/2204.06745). After two years of dedicated contributorship, various personal circumstances made my volunteering unsustainable and forced me to depart against my desire in <time time="2023-03-15">March 2023</time>.
 
 </section>
 </section>
@@ -75,7 +75,7 @@ Those looking to contact me, the author, maintainer, and webmaster of this site,
     <dt>Twitter</dt>
     <dd><a href="https://twitter.com/EricHallahan"><samp>@EricHallahan</samp></a>: Direct message requests open</dd>
     <dt>Discord</dt>
-    <dd><samp>EricHallahan#1051</samp>: Available via my <a href="https://discord.gg/MAkqqfMPgF">personal server</a>, direct message requests open</dd>
+    <dd><samp>erichallahan#0</samp>/<samp>EricHallahan#1051</samp>: Available via my <a href="https://discord.gg/MAkqqfMPgF">personal server</a>, direct message requests open</dd>
     <dt>LinkedIn</dt>
     <dd><a href="https://www.linkedin.com/in/eric-hallahan-a0aa34188/">Eric Hallahan</a>: Messaging available (though not prefered)</dd>
     <dt>Email & Telephone</dt>
