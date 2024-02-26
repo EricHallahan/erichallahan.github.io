@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Latin Modern Mono';
-    src:
+    src: local("lmmono10-italic"),
         url('/fonts/lm/lmmono10-italic.woff2') format('woff2'),
         url('/fonts/lm/lmmono10-italic.otf') format('opentype');
     font-weight: normal;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Latin Modern Mono';
-    src:
+    src: local("lmmono10-regular"),
         url('/fonts/lm/lmmono10-regular.woff2') format('woff2'),
         url('/fonts/lm/lmmono10-regular.otf') format('opentype');
     font-weight: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'Latin Modern Sans';
-    src:
+    src: local("lmsans10-boldoblique"),
         url('/fonts/lm/lmsans10-boldoblique.woff2') format('woff2'),
         url('/fonts/lm/lmsans10-boldoblique.otf') format('opentype');
     font-weight: bold;
@@ -27,7 +27,7 @@
 
 @font-face {
     font-family: 'Latin Modern Sans';
-    src:
+    src: local("lmsans10-bold"),
         url('/fonts/lm/lmsans10-bold.woff2') format('woff2'),
         url('/fonts/lm/lmsans10-bold.otf') format('opentype');
     font-weight: bold;
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: 'Latin Modern Sans';
-    src:
+    src: local("lmsans10-oblique"),
         url('/fonts/lm/lmsans10-oblique.woff2') format('woff2'),
         url('/fonts/lm/lmsans10-oblique.otf') format('opentype');
     font-weight: normal;
@@ -45,7 +45,7 @@
 
 @font-face {
     font-family: 'Latin Modern Sans';
-    src:
+    src: local("lmsans10-regular"),
         url('/fonts/lm/lmsans10-regular.woff2') format('woff2'),
         url('/fonts/lm/lmsans10-regular.otf') format('opentype');
     font-weight: normal;
@@ -54,7 +54,7 @@
 
 @font-face {
     font-family: 'Latin Modern Math';
-    src:
+    src: local('latinmodern-math'),
         url('/fonts/lm/latinmodern-math.woff2') format('woff2'),
         url('/fonts/lm/latinmodern-math.otf') format('opentype');
 }
