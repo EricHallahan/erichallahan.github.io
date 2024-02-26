@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Latin Modern Mono';
     src: local("lmmono10-italic"),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099718395890499725/lmmono10-italic.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099718395219415114/lmmono10-italic.otf') format('opentype');
+        url('/assets/fonts/lm/lmmono10-italic.woff2') format('woff2'),
+        url('/assets/fonts/lm/lmmono10-italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
@@ -10,8 +10,8 @@
 @font-face {
     font-family: 'Latin Modern Mono';
     src: local("lmmono10-regular"),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099718395538190426/lmmono10-regular.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099718394825146408/lmmono10-regular.otf') format('opentype');
+        url('/assets/fonts/lm/lmmono10-regular.woff2') format('woff2'),
+        url('/assets/fonts/lm/lmmono10-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
     font-family: 'Latin Modern Sans';
     src: local("lmsans10-boldoblique"),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720335579942912/lmsans10-boldoblique.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720336691429527/lmsans10-boldoblique.otf') format('opentype');
+        url('/assets/fonts/lm/lmsans10-boldoblique.woff2') format('woff2'),
+        url('/assets/fonts/lm/lmsans10-boldoblique.otf') format('opentype');
     font-weight: bold;
     font-style: oblique;
 }
@@ -28,8 +28,8 @@
 @font-face {
     font-family: 'Latin Modern Sans';
     src: local("lmsans10-bold"),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720335206645790/lmsans10-bold.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720337094098965/lmsans10-bold.otf') format('opentype');
+        url('/assets/fonts/lm/lmsans10-bold.woff2') format('woff2'),
+        url('/assets/fonts/lm/lmsans10-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
@@ -37,8 +37,8 @@
 @font-face {
     font-family: 'Latin Modern Sans';
     src: local("lmsans10-oblique"),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720334862716928/lmsans10-oblique.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720336389455932/lmsans10-oblique.otf') format('opentype');
+        url('/assets/fonts/lm/lmsans10-oblique.woff2') format('woff2'),
+        url('/assets/fonts/lm/lmsans10-oblique.otf') format('opentype');
     font-weight: normal;
     font-style: oblique;
 }
@@ -46,8 +46,8 @@
 @font-face {
     font-family: 'Latin Modern Sans';
     src: local("lmsans10-regular"),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720334518796441/lmsans10-regular.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099720335944843336/lmsans10-regular.otf') format('opentype');
+        url('/assets/fonts/lm/lmsans10-regular.woff2') format('woff2'),
+        url('/assets/fonts/lm/lmsans10-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -55,6 +55,6 @@
 @font-face {
     font-family: 'Latin Modern Math';
     src: local('latinmodern-math'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099728857671667803/latinmodern-math.woff2') format('woff2'),
-        url('https://cdn.discordapp.com/attachments/445631164871344139/1099728857998827640/latinmodern-math.otf') format('opentype');
+        url('/assets/fonts/lm/latinmodern-math.woff2') format('woff2'),
+        url('/assets/fonts/lm/latinmodern-math.otf') format('opentype');
 }
