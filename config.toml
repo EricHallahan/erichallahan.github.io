@@ -16,6 +16,10 @@ googleAnalytics = 'G-3PE7TN4Q9Y'
         url="https://twitter.com/EricHallahan"
         action="Follow"
     [[params.socialIcons]]
+        name="Bluesky"
+        url="https://bsky.app/profile/erichallahan.bsky.social"
+        action="Follow"
+    [[params.socialIcons]]
         name="LinkedIn"
         url="https://www.linkedin.com/in/eric-hallahan-a0aa34188/"
         action="Connect"
