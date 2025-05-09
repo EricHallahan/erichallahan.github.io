@@ -120,7 +120,8 @@
 <meta name="color-scheme" content="light dark" />
 
 {{- /* Generator */}}
-{{ hugo.Generator }}
+{{- /* hugo.Generator */}}
+<meta name="generator" content="Hugo {{ hugo.Version }}" />
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}

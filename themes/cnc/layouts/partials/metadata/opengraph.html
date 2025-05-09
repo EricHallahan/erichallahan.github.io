@@ -24,7 +24,7 @@
 {{- if .Params.cover.video }}
 {{- with .Params.cover.video -}}
 <meta property="og:video" content="{{ .src | absURL }}" />
-<meta property="og:video:type" content="{{ .type }}">
+<meta property="og:video:type" content="{{ .type }}" />
 {{ if .width }}<meta property="og:video:width" content="{{ .width }}" />{{ end }}
 {{ if .height }}<meta property="og:video:height" content="{{ .height }}" />{{ end }}
 {{ end }}

@@ -83,13 +83,13 @@ Biquads are quite simple but are also quite flexible—they have a number of use
 
 A low-order transfer function like a biquad is useful in simple situations, but when a number of them are equispaced across the human audible band we would like to control the magnitude of the frequency response over (and manipulating the aforementioned variables for each of them), their usefulness as a basic unit of filter design becomes a bit more clear.
 
-<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096249191375835306/plot_sys_incomplete.svg?ex=65ea6d1e&is=65d7f81e&hm=eaf18e6fbf8132dcade86d3aa5d7b4b871ffd0240012bc1b1623652426e981df&"/>
+<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096249191375835306/plot_sys_incomplete.svg?ex=65ea6d1e&amp;is=65d7f81e&amp;hm=eaf18e6fbf8132dcade86d3aa5d7b4b871ffd0240012bc1b1623652426e981df&amp;"/>
 
 Now that we have a collection of simple filters, we would like to combine these into something more complex. What is desired is a way to mathematically put them in series, or *cascade* them together into a big filter.
 
 It happens to be that the mathematical operation we desire is simply to multiply the complex rational polynomials of these transfer functions together to yield a high-order transfer function.
 
-<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096249705291321376/plot_sys.svg?ex=65ea6d99&is=65d7f899&hm=3ab9335bb3b7a85704fce07673a8d99a0a7d5651c26bca2e10115e942bed1d79&"/>
+<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096249705291321376/plot_sys.svg?ex=65ea6d99&amp;is=65d7f899&amp;hm=3ab9335bb3b7a85704fce07673a8d99a0a7d5651c26bca2e10115e942bed1d79&amp;"/>
 
 What we have done is constructed a <dfn>fixed-band equalizer</dfn>, the same type of one that might be seen on the front of a piece of Hi-Fi equipment. While it is not as flexible as a parametric equalizer, it is straightforward to use given that the center frequencies and quality factors are fixed after their initial selection, with the focus then shifting exclusively to tuning the gain of each band.
 
@@ -106,7 +106,7 @@ Even though equal-loudness is not a linear system (with absolute intensity mappi
 Given the reality that the tuning was going to be highly subjective, my approach was simply to minimize the perceived loudness difference between ears by repeatedly tuning the equalizer gains during sweeps from 20 Hz to 20 KHz. This tuning process took a substantial amount of menial effort to complete, but as I continued to tune it in, the less I felt the need to make changes, until at long last I felt comfortable to spend the effort to solidify it into production.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096921367720501348/plot_impl.svg?ex=65ecdf21&is=65da6a21&hm=0e607d19a6520d500913fbded25fb9a7f39d686f646cac0ed4fb7447dfe0a98b&">
+<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096921367720501348/plot_impl.svg?ex=65ecdf21&amp;is=65da6a21&amp;hm=0e607d19a6520d500913fbded25fb9a7f39d686f646cac0ed4fb7447dfe0a98b&amp;"/>
 <figcaption><p>Filter as put into production, with 22.4 dB of attenuation applied to both channels to prevent clipping.</p></figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ To create my discrete-time impulse response from my continuous time filter, I ha
 [^9]: If you guessed that this topic is orthogonal state-space models, pat yourself on the back. I *will* get to it eventually—I have a lot I would like to discuss on that topic and the mathematics involved.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096579284384096267/impulse.svg?ex=65eba08a&is=65d92b8a&hm=bbc484ef769bc2d0efab338eee190084781b7aa5c4cf233738291821a102fab4&"/>
+<img src="https://cdn.discordapp.com/attachments/445631164871344139/1096579284384096267/impulse.svg?ex=65eba08a&is=65d92b8a&amp;hm=bbc484ef769bc2d0efab338eee190084781b7aa5c4cf233738291821a102fab4&amp;"/>
 <figcaption><p>Simulated discrete-time impulse response of the desired filter, sampled at 48 kHz over 0.1 s. Note the right channel's existence as simply an attenuated impulse, which is a result of the attenuation that was applied to prevent clipping earlier.</p></figcaption>
 </figure>
 
@@ -180,7 +180,7 @@ To do this, I can leverage the Swiss Army knife of the multimedia world: FFmpeg.
 ```sh
 ffmpeg -i space_debris.mod space_debris.mp3
 ```
-<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096617170307387452/space_debris.mp3?ex=65ebc3d3&is=65d94ed3&hm=f8ebae9150af4556a89eadc1b5dbdc76a4d317222dc17d1edb4777c450106106&"></audio>
+<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096617170307387452/space_debris.mp3?ex=65ebc3d3&amp;is=65d94ed3&amp;hm=f8ebae9150af4556a89eadc1b5dbdc76a4d317222dc17d1edb4777c450106106&amp;"></audio>
 </div>
 <figcaption><p>Original audio</p></figcaption>
 </figure>
@@ -190,11 +190,11 @@ ffmpeg -i space_debris.mod space_debris.mp3
 ```sh
 ffmpeg -i space_debris.mod -filter_complex 'amovie=impulse.wav[ir]; [0][ir]afir=gtype=none' space_debris-filter.mp3
 ```
-<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096617170684887150/space_debris-filter.mp3?ex=65ebc3d3&is=65d94ed3&hm=137aa962a6582c544dbfe9aea0d159272c45d1deaaadce896a4d18082bc47cbd&"></audio>
+<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096617170684887150/space_debris-filter.mp3?ex=65ebc3d3&amp;is=65d94ed3&amp;hm=137aa962a6582c544dbfe9aea0d159272c45d1deaaadce896a4d18082bc47cbd&amp;"></audio>
 </div>
 <figcaption><p>Filtered audio</p></figcaption>
 </figure>
-<div>
+</div>
 <figcaption><p>A demonstration of the productionalized fixed-band equalizer as applied as a <abbr title="Finite Impulse Response">FIR</abbr> filter to <a href="https://markuskaarlonen.com/space-debris"><i>Space Debris</i> by Markus <q>Captain</q> Kaarlonen</a>. <strong>Wear headphones!</strong></p></figcaption>
 </figure>
 
@@ -300,7 +300,7 @@ Like before, we can demonstrate virtual surround by filtering audio ahead-of-tim
 ```sh
 ffmpeg -i space_debris.mod space_debris.mp3
 ```
-<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096617170307387452/space_debris.mp3?ex=65ebc3d3&is=65d94ed3&hm=f8ebae9150af4556a89eadc1b5dbdc76a4d317222dc17d1edb4777c450106106&"></audio>
+<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096617170307387452/space_debris.mp3?ex=65ebc3d3&amp;is=65d94ed3&amp;hm=f8ebae9150af4556a89eadc1b5dbdc76a4d317222dc17d1edb4777c450106106&amp;"></audio>
 </div>
 <figcaption><p>Original audio</p></figcaption>
 </figure>
@@ -310,7 +310,7 @@ ffmpeg -i space_debris.mod space_debris.mp3
 ```sh
 ffmpeg -i space_debris.mod -filter_complex "amovie=hrir.wav[hrir]; [0][hrir]headphone=map=FL|FR|FC|LFE|BL|BR|SL|SR:hrir=multich" space_debris-hrir.mp3
 ```
-<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096634080315064350/space_debris-hrir.mp3?ex=65ebd393&is=65d95e93&hm=64f42ea3a2aaf7ec76a66a5ce17967a2f0e7b1b0638216e037a3874144b4a8e9&"></audio>
+<audio controls="" src="https://cdn.discordapp.com/attachments/1095536142167842950/1096634080315064350/space_debris-hrir.mp3?ex=65ebd393&amp;is=65d95e93&amp;hm=64f42ea3a2aaf7ec76a66a5ce17967a2f0e7b1b0638216e037a3874144b4a8e9&amp;"></audio>
 </div>
 <figcaption><p>Audio processed with virtual surround</p></figcaption>
 </figure>

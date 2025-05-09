@@ -34,6 +34,7 @@ googleAnalytics = 'G-3PE7TN4Q9Y'
       footnote = true
     [markup.goldmark.renderer]
       unsafe = true
+      xhtml = true
   [markup.highlight]
     noClasses = false
 [menu]

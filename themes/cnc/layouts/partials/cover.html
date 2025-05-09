@@ -18,18 +18,18 @@
                     {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}"
             sizes="(min-width: 768px) 720px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}" />
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
-        <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
+        <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}" />
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
     {{- if .Params.cover.video -}}
     <video controls="" width="540">
-        <source src="{{ .Params.cover.video.src }}" type="{{ .Params.cover.video.type }}">
+        <source src="{{ .Params.cover.video.src }}" type="{{ .Params.cover.video.type }}" />
     </video>
     {{- else -}}
 
         {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
-            <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
+            <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}" />
             {{- end -}}
     {{- end }}
     {{- if $addLink }}</a>{{ end -}}
