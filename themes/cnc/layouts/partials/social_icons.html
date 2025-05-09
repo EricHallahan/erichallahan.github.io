@@ -2,7 +2,7 @@
     {{- range . }}
     <li>
         <a class="arrow-link" href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name }}">
-        {{ partial "svg.html" . }} <span>{{.action}} {{site.Params.organization.name}} on {{.name}}.</span>
+        {{ partial "svg.html" . }} <span>{{.action}} {{site.Params.organization.name}} on {{.name}}</span>
         </a>
     </li>
     {{- end }}
